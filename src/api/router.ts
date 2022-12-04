@@ -75,6 +75,6 @@ router.get("/user/check-if-dish-bookmarked/:uid/:dishId", UserController.checkIf
 
 //Contact
 router.post("/contact/create/", ContactController.createContactController);
-router.get("/contact/get-all", ContactController.getAllContactsController);
+router.get("/contact/get-all/", ContactController.getAllContactsController);
 
 export { router };

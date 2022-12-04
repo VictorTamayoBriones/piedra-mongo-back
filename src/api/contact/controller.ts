@@ -1,10 +1,7 @@
 import express from "express";
 import * as service from './service';
 
-async function createContactController(
-    req: express.Request,
-    res: express.Response
-) {
+async function createContactController(req: express.Request,res: express.Response) {
     try {
         const contactData: any = req.body.contactData;
 
