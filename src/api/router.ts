@@ -6,6 +6,7 @@ import * as DishesController from './dishs/controller';
 import * as TagController from './tags/controller'
 import * as UserController from "./user/controller";
 import * as CateogryController from "./categories/controller";
+import * as ContactController from './contact/controller'
 
 const router = express.Router();
 
@@ -72,6 +73,8 @@ router.post("/user/add-bookmarked-dish", UserController.addBookMarkedDishControl
 router.post("/user/remove-bookmarked-dish", UserController.removeBookMarkedDishController);
 router.get("/user/check-if-dish-bookmarked/:uid/:dishId", UserController.checkIfDishIsBookMarkedController);
 
-
+//Contact
+router.post("/contact/create/", ContactController.createContactController);
+router.get("/contact/get-all", ContactController.getAllContactsController);
 
 export { router };
