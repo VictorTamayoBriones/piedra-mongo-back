@@ -3,7 +3,7 @@ import * as service from './service';
 
 async function createContactController(req: express.Request,res: express.Response) {
     try {
-        const contactData: any = req.body.contactData;
+        const contactData: any = req.body;
 
         var item = await service.createContact(contactData);
 
