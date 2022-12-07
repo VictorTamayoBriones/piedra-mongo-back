@@ -7,6 +7,8 @@ import * as TagController from './tags/controller'
 import * as UserController from "./user/controller";
 import * as CateogryController from "./categories/controller";
 import * as ContactController from './contact/controller'
+import * as PedidosController from './pedidos/controller'
+
 
 const router = express.Router();
 
@@ -76,5 +78,9 @@ router.get("/user/check-if-dish-bookmarked/:uid/:dishId", UserController.checkIf
 //Contact
 router.post("/contact/create/", ContactController.createContactController);
 router.get("/contact/get-all/", ContactController.getAllContactsController);
+
+//Pedidos
+router.post("/pedido/create/", PedidosController.createPedidoController);
+router.get("/pedido/get-all/", PedidosController.getAllPedidosController);
 
 export { router };
